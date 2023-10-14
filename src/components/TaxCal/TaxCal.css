@@ -1,6 +1,5 @@
 .container{
     display: flex;
-
 flex-direction: column;
 align-items: center;
     padding: 35px 73px 58px 79px;
@@ -9,9 +8,6 @@ align-items: center;
     flex: 1 0 0;
     border-radius: 16px;
 background: #FFF;
-
-/* grid-column: span 2 / span 2; */
-
 }
 .heading{
 color: var(--gray-1, #0F1629);
@@ -24,6 +20,7 @@ line-height: 42px;
 }
 .subContainer{
     display: flex;
+    flex-direction: column;
     gap:40px;
 }
 .line{
@@ -39,3 +36,48 @@ border-bottom: 1px solid rgba(201, 207, 221, 0.60);
     font-weight: 400;
     line-height: 24px;
 }
+.button1{
+padding:12px 12px;
+
+}
+.subContainer1{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+}
+.subContainer2{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+.header{
+    color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+}
+.intype{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.alignbtn{
+    display: flex;
+    gap:6px;
+}
+.btn{
+padding: 13px 16px;
+border-radius: 8px;
+border: 1px solid var(--gray-2, #3E424A);
+background: rgba(0, 82, 254, 0.00);
+}
+.btn:onClick{
+border-radius: 8px;
+border: 2px solid var(--primary-blue, #0052FE);
+background: rgba(0, 82, 254, 0.06);
+
+}
+
