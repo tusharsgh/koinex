@@ -1,0 +1,21 @@
+.InputField{
+    background: #EFF2F5;
+    border-radius: 8px;
+    background: #EFF2F5;
+    Padding: 17px 16px;
+    border: 0;
+    
+}
+.NameField{
+    color: var(--gray-1, #0F1629);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    
+}

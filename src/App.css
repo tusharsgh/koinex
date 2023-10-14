@@ -1,0 +1,35 @@
+.main{
+    
+    background: #ccced0;
+}
+
+.grid{
+    /* display:grid;
+    grid-template-columns: repeat(3,minmax(0,1fr)); */
+    display: inline-flex;
+    gap: 20px;
+    flex-shrink: 0;
+    padding: 0.5px 56px 0.5px 60px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.column{
+display: flex;
+flex-direction:column; 
+overflow: hidden;
+gap:20px;
+}
+.FAQ{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+        padding: 35px 73px 58px 79px;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: 16px;
+    background: #FFF;
+   
+}
