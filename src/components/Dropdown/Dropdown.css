@@ -4,6 +4,7 @@
   align-items: center;
   gap: 0.125rem;
   overflow: hidden;
+  justify-content: space-between;
 }
 .dropdown-header{
   font-size: 0.875rem;

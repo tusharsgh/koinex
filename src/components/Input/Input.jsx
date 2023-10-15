@@ -1,9 +1,12 @@
 import React,{useCallback,useState} from 'react'
 import './Input.css';
 import CurrencyInput from 'react-currency-input-field';
-function Input({name}) {
+function Input({name ,inputhandler}) {
 
+function handler(value){
+  inputhandler(value)
 
+}
 
   return (
     <div className="Container">
@@ -14,7 +17,7 @@ function Input({name}) {
   className="InputField"
   defaultValue={1000}
   decimalsLimit={2}
-  onValueChange={(value, name) => console.log(value, name)}
+  onValueChange={(value, name) =>inputhandler(value) }
   prefix="$"
 /> 
 

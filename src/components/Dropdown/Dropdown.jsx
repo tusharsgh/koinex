@@ -65,7 +65,7 @@ export default function MultipleSelectPlaceholder({names,header}) {
 
     setAge(event.target.value);
   };
- console.log({names});
+//  console.log({names});
 
   return (
 

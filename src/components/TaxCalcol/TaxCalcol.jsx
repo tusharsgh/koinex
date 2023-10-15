@@ -9,13 +9,51 @@ import AnnualIncome from "../AnualIncome/AnnualIncome";
 
 function TaxCalcol() {
   const [age, setAge] = React.useState('');
+  const[Purchase ,setPurchase] = React.useState();
+  const[Sale,setSale] = React.useState();
+  const[Expense,setExpense] = React.useState();
+  const[Income,setIncome] = React.useState();
+  const[CapitalGains,setCapitalGains] = React.useState("$5,000");
   const [text,setText] = useState("$5,092 + 32,5% of excess over $45,000");
-  const [Capital,setCapital] = useState("$5,000")
+  const [LongCapitalDiscount,setLongCapitalDiscount] = React.useState("$5,000"); 
+  const [isShort,setIsShort] = useState(false);
+  
+  function PurchaseHandler(value){
+
+       setPurchase(value);
+       CapitalGainsCal()
+     
+  }
+  function ExpenseHandler(value){
+    setExpense(value);
+    CapitalGainsCal()
+  }
+  function SaleHandler(value){
+    setSale(value);
+   
+    CapitalGainsCal()
+  }
+  function longTermDiscount(){
+    if(!isShort){
+      
+      
+      console.log(LongCapitalDiscount)
+    }
+  }
+  function CapitalGainsCal(){
+    setCapitalGains(Sale-Purchase-Expense);
+    console.log(typeof(Sale-Purchase-Expense))
+    if(CapitalGains>0){
+      setLongCapitalDiscount(0.5*CapitalGains);
+      console.log(LongCapitalDiscount);
+    }
+  }
+
   const handleChange = (event) => {
     setAge(event.target.value);
   }
-  const [isShort,setIsShort] = useState(false);
-  function textselector(tax){
+  
+  function textselector(tax,){
       setText(tax);
       console.log(tax);
   }
@@ -30,7 +68,7 @@ function TaxCalcol() {
     console.log("Called long");
     setIsShort(false);
   }
-
+  
 
 
   return (
@@ -48,8 +86,13 @@ function TaxCalcol() {
        names={Financialyear}
        header={"Financial Year"}
         />
-        <Input name="Enter the purchase price of crypto"/>
-        <Input name="Enter your expense"/>
+        <Input 
+        name="Enter the purchase price of crypto"
+       inputhandler={PurchaseHandler}
+        />
+        <Input name="Enter your expense"
+        inputhandler={ExpenseHandler}
+        />
        
 
       <AnnualIncome
@@ -60,7 +103,7 @@ function TaxCalcol() {
  null:
   <div className="output-wrapper">
 <div className="output-header">Capital gains amount</div>
-<div className="out-field">{Capital}</div>
+<div className="out-field" >{CapitalGains}</div>
 </div>}
 
       <div className="ansamount">
@@ -78,7 +121,9 @@ function TaxCalcol() {
         names={Country}
         header={"Country"}
         /> 
-        <Input name="Enter the purchase price of crypto"/>
+        <Input name="Enter sale price of Crypto"
+         inputhandler={SaleHandler}
+        />
 
         <div className="intype">
           <div className="header">Investment Type</div>
@@ -109,8 +154,8 @@ function TaxCalcol() {
        {isShort?
  null:
   <div className="output-wrapper">
-<div className="output-header">Capital gains amount</div>
-<div className="out-field">{Capital}</div>
+<div className="output-header" >Discount for long term gains</div>
+<div className="out-field">{LongCapitalDiscount}</div>
 </div>}
 
        <div className="ansamount2">
