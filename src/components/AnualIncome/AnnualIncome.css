@@ -1,0 +1,12 @@
+.income-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.income-header{
+    color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+}

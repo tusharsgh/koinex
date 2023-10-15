@@ -1,3 +1,89 @@
+.col-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.1875rem 1.5625rem 3.4375rem;
+    justify-content: flex-end;
+    border-radius: 16px;
+background: #FFF;
+gap: 1.75rem;
+flex-grow: 1;
+position: relative;
+
+}
+.col-header{
+color: var(--gray-1, #0F1629);
+text-align: center;
+font-family: Inter;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+ /* 116.667% */
+}
+.col-mainContainer{
+display: flex;
+flex-grow: 1;
+gap: 10%;
+justify-content: space-evenly;
+
+}
+.col-subContainer1{
+    display: flex;
+    flex-direction: column;
+    gap:1.75rem;
+    flex-grow: 1;
+    width: 80%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.col-subContainer2{
+    display: flex;
+    flex-direction: column;
+    gap:1.75rem;
+    flex-grow: 1;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.Tax-wrapper{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.Tax-header{
+    color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+}
+.Tax-text{
+    color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.line{
+    width: 80%;
+position:absolute;
+top: 28.1%;
+border-bottom: 1px solid rgba(201, 207, 221, 0.60);
+}
+.line2{
+    width: 80%;
+position:absolute;
+top:24%;
+border-bottom: 1px solid rgba(201, 207, 221, 0.60);
+}
+
+
+
+/* taxcal */
 .container{
     display: flex;
 flex-direction: column;
@@ -134,4 +220,27 @@ color:#0052FE;
     
    
     
+}
+.output-wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+.output-header{
+    color: var(--gray-1, #0F1629);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+.out-field{
+    background: #EFF2F5;
+    border-radius: 4px;
+    background: #EFF2F5;
+    Padding: 16px 70px 16px 10px;
+  font-size: 18px;
+  font-weight: 500;
+
+    border: 0;  
 }

@@ -8,7 +8,7 @@ function Input({name}) {
   return (
     <div className="Container">
       <div className="NameField">{name}</div>
-      <CurrencyInput
+     <CurrencyInput
   
   name="input-name"
   className="InputField"
@@ -16,7 +16,8 @@ function Input({name}) {
   decimalsLimit={2}
   onValueChange={(value, name) => console.log(value, name)}
   prefix="$"
-/>
+/> 
+
     </div>
   )
 }

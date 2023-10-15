@@ -1,0 +1,22 @@
+.cn{
+    display:flex;
+    flex-direction:column;
+
+}
+.ques{
+    font-size: 20px;
+    color:#0B1426;
+    font-weight: 700;
+    list-style-type: none;
+    
+}
+.answer{
+    font-family: Inter;
+    font-weight: 500;
+}
+.sp{
+    font-style: normal;
+    font-size: 16px;
+    color:#0B1426;
+    font-weight: 700; 
+}
