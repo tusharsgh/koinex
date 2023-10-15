@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.1875rem 1.5625rem 3.4375rem;
+    padding: 35px 25px 55px 25px;
     justify-content: flex-end;
     border-radius: 16px;
 background: #FFF;
-gap: 1.75rem;
+gap:28px;
 flex-grow: 1;
 position: relative;
 
@@ -18,14 +18,13 @@ font-family: Inter;
 font-size: 36px;
 font-style: normal;
 font-weight: 700;
- /* 116.667% */
+line-height: 42px; /* 116.667% */
 }
 .col-mainContainer{
 display: flex;
 flex-grow: 1;
-gap: 10%;
+gap: 42px;
 justify-content: space-evenly;
-
 }
 .col-subContainer1{
     display: flex;
@@ -40,7 +39,7 @@ justify-content: space-evenly;
 .col-subContainer2{
     display: flex;
     flex-direction: column;
-    gap:1.75rem;
+    gap:28px;
     flex-grow: 1;
     width: 80%;
     flex-wrap: wrap;
