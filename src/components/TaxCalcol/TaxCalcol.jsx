@@ -31,12 +31,13 @@ const [change,useChange] = useState({
    TaxYouNeedToPay:2500,
    
 });
-function TaxHandler(id){
+function TaxHandler(){
     console.log(Tax.Id);
   useChange(
     {
       ...change,
-       TaxYouNeedToPay:taxbracket[Tax.Id-1].Tax*change.netCapital
+
+   TaxYouNeedToPay:taxbracket[Tax.Id-1].Tax*(change.netCapital)
     }
   )
 }
@@ -128,15 +129,17 @@ useChange({
         <Input 
         name="Enter the purchase price of crypto"
        inputhandler={PurchaseHandler}
+       placeholder={30000}
         />
         <Input name="Enter your expense"
         inputhandler={ExpenseHandler}
+        placeholder={5000}
         />
        
 
       <AnnualIncome
       taxhandler={textselector}
-      // changeHandler={TaxHandler}
+      setTax={setTax}
 
 
      
@@ -165,6 +168,7 @@ useChange({
         /> 
         <Input name="Enter sale price of Crypto"
          inputhandler={SaleHandler}
+         placeholder={20000}
         />
 
         <div className="intype">

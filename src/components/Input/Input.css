@@ -3,7 +3,7 @@
     border-radius: 0.5rem;
     background: #EFF2F5;
     padding: 1rem 4.375rem 1rem 0.625rem;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
   font-weight: 500;
 
     border: 0;
@@ -12,7 +12,7 @@
 .NameField{
     color: var(--gray-1, #0F1629);
     font-family: Inter;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem; /* 171.429% */

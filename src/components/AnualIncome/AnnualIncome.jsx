@@ -56,7 +56,7 @@ function getStyles(name, personName, theme) {
   };
 }
 
-export default function MultipleSelectPlaceholder(props) {
+export default function MultipleSelectPlaceholder({ taxhandler, setTax}) {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
   const [age, setAge] = React.useState("")
@@ -65,7 +65,8 @@ export default function MultipleSelectPlaceholder(props) {
     setAge(event.target.value);
   };
   const handler=(text,id)=>{
-    props.taxhandler(text,id);
+    taxhandler(text,id);
+    setTax({ ...setTax, text: text, Id: id });
   }
   
 
