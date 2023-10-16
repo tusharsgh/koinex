@@ -7,7 +7,7 @@
     border-radius: 1rem;
 background: #FFF;
 gap:28px;
-flex-grow: 1;
+/* flex-grow: 1; */
 position: relative;
 
 
@@ -23,7 +23,7 @@ line-height: 2.625rem; /* 116.667% */
 }
 .col-mainContainer{
 display: flex;
-flex-grow: 1;
+/* flex-grow: 1; */
 gap: 20%;
 justify-content: space-evenly;
 width: 100%;
@@ -32,7 +32,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     gap:2.75rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 80%;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     gap:2.75rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 80%;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -71,15 +71,15 @@ font-weight: 500;
 line-height: normal;
 }
 .line{
-    width: 87%;
+    width: 84%;
 position:absolute;
-top: 25.16%;
+top: 30.6%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);
 }
 .line2{
-    width: 87%;
+    width: 84%;
 position:absolute;
-top: 21.31%;
+top: 25.9%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);
 }
 
@@ -95,7 +95,7 @@ align-items: center;
     border-radius: 16px;
 background: #FFF;
 gap:28px;
-flex-grow: 1;
+/* flex-grow: 1; */
 
 }
 .heading{
@@ -111,7 +111,7 @@ line-height: 2.625rem;
     display: flex;
     flex-direction: column;
     gap:40px;
-    flex-grow:1;
+    /* flex-grow:1; */
    
 }
 
