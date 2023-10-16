@@ -19,18 +19,7 @@ function TaxCalcol() {
   const [checkId,setCheckId] = useState();
   const [isShort,setIsShort] = useState(false);
   const [CapitalsHandler,setCapitalsHandler] = React.useState(false);
-  function TaxHandler(){
-    
-    useChange(
-      {
-        ...change,
-        
-      }
-    )
-  }
-  useEffect(()=>{
-    TaxHandler()
-  },[Tax])
+  
 
 const [change,useChange] = useState({
   PurChase:1000,
@@ -42,6 +31,18 @@ const [change,useChange] = useState({
    TaxYouNeedToPay:2500,
    
 });
+function TaxHandler(id){
+    console.log(Tax.Id);
+  useChange(
+    {
+      ...change,
+       TaxYouNeedToPay:taxbracket[Tax.Id-1].Tax*change.netCapital
+    }
+  )
+}
+useEffect(()=>{
+  TaxHandler()
+},[Tax])
   
   function PurchaseHandler(value){
 useChange({
@@ -135,6 +136,9 @@ useChange({
 
       <AnnualIncome
       taxhandler={textselector}
+      // changeHandler={TaxHandler}
+
+
      
       />
  {isShort?

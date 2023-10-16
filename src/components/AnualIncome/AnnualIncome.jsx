@@ -67,6 +67,7 @@ export default function MultipleSelectPlaceholder(props) {
   const handler=(text,id)=>{
     props.taxhandler(text,id);
   }
+  
 
   return (
 
