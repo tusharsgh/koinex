@@ -17,11 +17,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
   '& .MuiInputBase-input': {
     borderRadius: 4,
-    position: 'relative',
+    
     backgroundColor: "#EFF2F5",
     border: '1px solid #ced4da',
     fontSize: 18,
-    padding: '6px 11px 6px 5px',
+    padding: '6px 65px 6px 5px',
     border:0,
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
@@ -66,14 +66,15 @@ export default function MultipleSelectPlaceholder({names,header}) {
     setAge(event.target.value);
   };
 //  console.log({names});
-
+// width:"14.375rem"
   return (
 
     <div className="dropdown-wrapper">
       <div className="dropdown-header"> {header}</div>
-      <FormControl sx={{ width:"14.375rem",
+      <FormControl sx={{ 
        height:"2",
-      
+       width:"100%",
+      paddingright:'60px',
       
     }}>
         <Select

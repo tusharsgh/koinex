@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.1875rem 2.5625rem 3.4375rem 2.5625rem;
+    padding: 2.1875rem 4.5625rem 3rem 4.9375rem;
     justify-content: flex-end;
     border-radius: 1rem;
 background: #FFF;
@@ -24,7 +24,7 @@ line-height: 2.625rem; /* 116.667% */
 .col-mainContainer{
 display: flex;
 flex-grow: 1;
-gap: 42px;
+gap: 10%;
 justify-content: space-evenly;
 width: 100%;
 }
@@ -71,13 +71,13 @@ font-weight: 500;
 line-height: normal;
 }
 .line{
-    width: 90%;
+    width: 80%;
 position:absolute;
 top: 25.16%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);
 }
 .line2{
-    width: 90%;
+    width: 80%;
 position:absolute;
 top: 21.31%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);
@@ -175,16 +175,6 @@ color:#0052FE;
     }
 
 
-.ansamount{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:14px 28px;
-    border: 3px solid var(--primary-blue, #EBF9F4);
-    background-color: #EBF9F4;
-    border-radius: 5px;
-
-}
 .net{
     font-family: Inter;
     font-size: 14px;
@@ -197,21 +187,35 @@ color:#0052FE;
     color:#0FBA83;
    font-weight:700;
     size:24px;
+    white-space: nowrap;
+}
+.ansamount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.875rem 1.75rem;
+    border: 3px solid var(--primary-blue, #EBF9F4);
+    background-color: #EBF9F4;
+    border-radius: 5px;
+    overflow: hidden;
+
 }
 .ansamount2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:14px 58px;
+    padding:0.875rem 1.75rem;
     border: 3px solid var(--primary-blue, #EBF2FF);
     background-color: #EBF2FF;
     border-radius: 5px;
+    overflow: hidden;
 
 }
 .amount2{
     color:#0141CF;
    font-weight:700;
     size:24px;
+    white-space: nowrap;
 }
 
 
@@ -226,7 +230,9 @@ color:#0052FE;
 .output-wrapper{
     display: flex;
     flex-direction: column;
-
+    overflow: hidden;
+   
+  
 }
 .output-header{
     color: var(--gray-1, #0F1629);
@@ -240,9 +246,12 @@ color:#0052FE;
     background: #EFF2F5;
     border-radius: 4px;
     background: #EFF2F5;
-    Padding: 16px 70px 16px 10px;
-  font-size: 1.125rem;
-  font-weight: 500;
-
+    Padding: 20px 70px 20px 10px;
+    font-size: 1.125rem;
+    font-weight: 500;
+   white-space: nowrap;
+   
     border: 0;  
+   
+
 }

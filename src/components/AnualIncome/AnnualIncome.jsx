@@ -75,7 +75,7 @@ export default function MultipleSelectPlaceholder({ taxhandler, setTax}) {
 
     <div className="income-wrapper">
       <div className="income-header"> Select Your Annual Income</div>
-      <FormControl sx={{ width:"300px",
+      <FormControl sx={{ 
        height:"2",
       
       
