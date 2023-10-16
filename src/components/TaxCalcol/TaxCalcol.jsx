@@ -148,7 +148,7 @@ useChange({
  null:
   <div className="output-wrapper">
 <div className="output-header">Capital gains amount</div>
-<div className="out-field" >$ {change.CapitalGains}</div>
+<div className="out-field" >$ {isNaN(change.CapitalGains)?0:change.CapitalGains}</div>
 </div>}
 
       <div className="ansamount">
@@ -156,7 +156,7 @@ useChange({
             Net Capital gain tax amount
           </div>
           <div className="amount">
-          $ {change.netCapital}
+          $ {isNaN(change.netCapital)?0:change.netCapital}
           </div>
         </div>
       
@@ -201,7 +201,7 @@ useChange({
  null:
   <div className="output-wrapper">
 <div className="output-header" >Discount for long term gains</div>
-<div className="out-field">$ {change.LongCapitalDiscount}</div>
+<div className="out-field">$ {isNaN(change.LongCapitalDiscount)?0:change.LongCapitalDiscount}</div>
 </div>}
 
        <div className="ansamount2">
@@ -209,7 +209,7 @@ useChange({
            The Tax you need to pay
           </div>
           <div className="amount2">
-            $ {change.TaxYouNeedToPay}
+            $ {isNaN(change.TaxYouNeedToPay)?0:change.TaxYouNeedToPay}
           </div>
         </div>
         </div>
