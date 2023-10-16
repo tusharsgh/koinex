@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import  './TaxCalcol.css';
 import Input from '../Input/Input';
 import { faSolid, faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -6,56 +6,94 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { taxbracket ,Country,Financialyear} from '../../taxbracket';
 import Dropdown from '../Dropdown/Dropdown';
 import AnnualIncome from "../AnualIncome/AnnualIncome";
+import { Tab } from '@mui/base';
 
 function TaxCalcol() {
   const [age, setAge] = React.useState('');
-  const[Purchase ,setPurchase] = React.useState();
-  const[Sale,setSale] = React.useState();
-  const[Expense,setExpense] = React.useState();
+
   const[Income,setIncome] = React.useState();
-  const[CapitalGains,setCapitalGains] = React.useState("$5,000");
-  const [text,setText] = useState("$5,092 + 32,5% of excess over $45,000");
-  const [LongCapitalDiscount,setLongCapitalDiscount] = React.useState("$5,000"); 
+
+  const [Tax,setTax] = useState({text:"$5,092 + 32,5% of excess over $45,000",
+                                  Id:3,
+                                  })
+  const [checkId,setCheckId] = useState();
   const [isShort,setIsShort] = useState(false);
+  const [CapitalsHandler,setCapitalsHandler] = React.useState(false);
+  function TaxHandler(){
+    
+    useChange(
+      {
+        ...change,
+        
+      }
+    )
+  }
+  useEffect(()=>{
+    TaxHandler()
+  },[Tax])
+
+const [change,useChange] = useState({
+  PurChase:1000,
+  Sale:1000,
+  Expense:1000,
+   CapitalGains:5000,
+   LongCapitalDiscount:5000,
+   netCapital:2500,
+   TaxYouNeedToPay:2500,
+   
+});
   
   function PurchaseHandler(value){
+useChange({
+  ...change,PurChase:value,
+  CapitalGains:change.Sale-value-change.Expense,
+  LongCapitalDiscount:0.5*(change.Sale-value-change.Expense),
+  netCapital:isShort?(change.Sale-value-change.Expense):(change.Sale-value-change.Expense)-0.5*(change.Sale-value-change.Expense),
+  TaxYouNeedToPay:isShort?taxbracket[Tax.Id-1].Tax*(change.Sale-value-change.Expense):taxbracket[Tax.Id-1].Tax*((change.Sale-value-change.Expense)-0.5*(change.Sale-value-change.Expense))
+});
+  console.log(Tax)
+  console.log(change);
 
-       setPurchase(value);
-       CapitalGainsCal()
-     
   }
+  
   function ExpenseHandler(value){
-    setExpense(value);
-    CapitalGainsCal()
-  }
-  function SaleHandler(value){
-    setSale(value);
    
-    CapitalGainsCal()
-  }
-  function longTermDiscount(){
-    if(!isShort){
-      
-      
-      console.log(LongCapitalDiscount)
-    }
-  }
-  function CapitalGainsCal(){
-    setCapitalGains(Sale-Purchase-Expense);
-    console.log(typeof(Sale-Purchase-Expense))
-    if(CapitalGains>0){
-      setLongCapitalDiscount(0.5*CapitalGains);
-      console.log(LongCapitalDiscount);
-    }
-  }
+    useChange({
+      ...change,
+      Expense:value,
+      CapitalGains:change.Sale-change.PurChase-value,
+      LongCapitalDiscount:0.5*(change.Sale-change.PurChase-value),
+      netCapital:isShort?(change.Sale-change.PurChase-value):(change.Sale-change.PurChase-value)-0.5*(change.Sale-change.PurChase-value),
+      TaxYouNeedToPay:isShort?taxbracket[Tax.Id-1].Tax*(change.Sale-change.PurChase-value):taxbracket[Tax.Id-1].Tax*((change.Sale-change.PurChase-value)-0.5*(change.Sale-change.PurChase-value)),
+    });
 
+    
+  }
+  
+  function SaleHandler(value){
+    useChange({
+      ...change,
+      Sale:value,
+      CapitalGains:value-change.PurChase-change.Expense,
+      LongCapitalDiscount:0.5*(value-change.PurChase-change.Expense),
+      netCapital:isShort?(value-change.PurChase-change.Expense):(value-change.PurChase-change.Expense)-0.5*(value-change.PurChase-change.Expense),
+      TaxYouNeedToPay:isShort?taxbracket[Tax.Id-1].Tax*(value-change.PurChase-change.Expense):taxbracket[Tax.Id-1].Tax*((value-change.PurChase-change.Expense)-0.5*(value-change.PurChase-change.Expense))
+    });  
+  }
+ 
+ 
   const handleChange = (event) => {
     setAge(event.target.value);
   }
   
-  function textselector(tax,){
-      setText(tax);
-      console.log(tax);
+  function textselector(text,id){
+      setTax({...Tax,text:text,
+        id:id,
+      
+      
+      });
+
+      
   }
 
   function shortTermHandler(){
@@ -103,7 +141,7 @@ function TaxCalcol() {
  null:
   <div className="output-wrapper">
 <div className="output-header">Capital gains amount</div>
-<div className="out-field" >{CapitalGains}</div>
+<div className="out-field" >$ {change.CapitalGains}</div>
 </div>}
 
       <div className="ansamount">
@@ -111,7 +149,7 @@ function TaxCalcol() {
             Net Capital gain tax amount
           </div>
           <div className="amount">
-            $2500
+          $ {change.netCapital}
           </div>
         </div>
       
@@ -147,7 +185,7 @@ function TaxCalcol() {
         Tax Rate
         </div>
       <div className="Tax-text">
-        {text}
+        {Tax.text}
       </div>
          
        </div>
@@ -155,15 +193,15 @@ function TaxCalcol() {
  null:
   <div className="output-wrapper">
 <div className="output-header" >Discount for long term gains</div>
-<div className="out-field">{LongCapitalDiscount}</div>
+<div className="out-field">$ {change.LongCapitalDiscount}</div>
 </div>}
 
        <div className="ansamount2">
           <div className="net">
-            Net Capital gain tax amount
+           The Tax you need to pay
           </div>
           <div className="amount2">
-            $2500
+            $ {change.TaxYouNeedToPay}
           </div>
         </div>
         </div>

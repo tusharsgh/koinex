@@ -64,8 +64,8 @@ export default function MultipleSelectPlaceholder(props) {
 
     setAge(event.target.value);
   };
-  const handler=(id)=>{
-    props.taxhandler(id);
+  const handler=(text,id)=>{
+    props.taxhandler(text,id);
   }
 
   return (
@@ -99,7 +99,7 @@ export default function MultipleSelectPlaceholder(props) {
               key={name.id}
               value={name.Income}
               onClick={()=>{
-                handler(name.Tax);
+                handler(name.Text,name.id);
               }}
               defaultValue={taxbracket[2].Income}
               style={getStyles(name, personName, theme)}
