@@ -114,7 +114,7 @@ useChange({
   return (
     <div className="col-wrapper">
 
-       <div className="col-header">Free Crypto Tax Calculator</div>
+       <div className="col-header">Free Crypto Tax Calculator Australia</div>
        <div className={` ${isShort?"line":"line2"}`}></div>       
     <div className="col-mainContainer">
 

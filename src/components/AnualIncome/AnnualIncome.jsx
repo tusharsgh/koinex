@@ -21,8 +21,9 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     backgroundColor: "#EFF2F5",
     border: '1px solid #ced4da',
     fontSize: 18,
-    padding: '0.425rem 0.75rem 0.425rem 0.75rem',
+    padding: '0.625rem 0.75rem 0.625rem 0.75rem',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
+    border:0,
     // Use the system font instead of the default Roboto font.
     fontFamily: [
       '-apple-system',
