@@ -22,9 +22,9 @@ function TaxCalcol() {
   
 
 const [change,useChange] = useState({
-  PurChase:1000,
-  Sale:1000,
-  Expense:1000,
+  PurChase:30000,
+  Sale:20000,
+  Expense:5000,
    CapitalGains:5000,
    LongCapitalDiscount:5000,
    netCapital:2500,

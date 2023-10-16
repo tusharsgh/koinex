@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.1875rem 4.5625rem 3rem 4.9375rem;
+    padding: 2.1875rem 4.5625rem 3rem 4.5625rem;
     justify-content: flex-end;
     border-radius: 1rem;
 background: #FFF;
@@ -24,7 +24,7 @@ line-height: 2.625rem; /* 116.667% */
 .col-mainContainer{
 display: flex;
 flex-grow: 1;
-gap: 10%;
+gap: 20%;
 justify-content: space-evenly;
 width: 100%;
 }
@@ -71,13 +71,13 @@ font-weight: 500;
 line-height: normal;
 }
 .line{
-    width: 80%;
+    width: 87%;
 position:absolute;
 top: 25.16%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);
 }
 .line2{
-    width: 80%;
+    width: 87%;
 position:absolute;
 top: 21.31%;
 border-bottom: 0.0625rem solid rgba(201, 207, 221, 0.60);

@@ -26,7 +26,7 @@ flex-direction:column;
 overflow: hidden;
 gap:1.125rem;
 flex-shrink: 0;
-flex-basis: 50rem;
+/* flex-basis: 50rem; */
 flex-wrap: wrap;
 /* margin-top: 20px;
 margin-bottom: 20px; */
@@ -35,14 +35,15 @@ margin-bottom: 20px; */
 .FAQ{
     display: flex;
     flex-direction: column;
-        padding: 2.1875rem 4.375rem 3.625rem 4.9375rem;
+        padding: 2.1875rem 4.375rem 3.625rem 4.375rem;
         justify-content: flex-end;
         align-items: start;
-        flex: 0 0 800;       
+        /* flex: 0 0 800;        */
         border-radius: 16px;
     background: #FFF;
     flex-grow: 1;
     gap:25px;
+    max-width: 50rem;
    
 }
 .text{
@@ -61,7 +62,8 @@ border-bottom: 1px solid rgba(201, 207, 221, 0.60);
     
 }
 @media (max-width: 925px) {
-    .grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
+    .main{
+    display:flex;
+    background: #ccced0;
+}
   }
