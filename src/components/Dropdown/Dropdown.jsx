@@ -113,6 +113,8 @@ export default function MultipleSelectPlaceholder({names,header}) {
               }}>
               {name.flag?<img src={name.flag} style={{
                 borderRadius:"100%",
+                height:"2rem",
+                width:"1.5rem"
                
               }} ></img>:null}
               {name.text}
