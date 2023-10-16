@@ -108,13 +108,13 @@ export default function MultipleSelectPlaceholder({names,header}) {
                 flexdirection:'row',
                 gap:4,
                 alignItems:'center',
-                fontSize:18,
+                fontSize:`${name.flag?'0.9375rem':'1.25rem'}`,
 
               }}>
               {name.flag?<img src={name.flag} style={{
                 borderRadius:"100%",
-                height:"2rem",
-                width:"1.5rem"
+                height:"1.7rem",
+                width:"1.7rem"
                
               }} ></img>:null}
               {name.text}

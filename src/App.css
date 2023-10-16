@@ -4,9 +4,9 @@
 }
 
 .grid{
-    display:grid;
-     grid-template-columns: repeat(200px,minmax(0,1fr));  
-  
+    /* display:grid;
+     grid-template-columns: repeat(200px,minmax(0,1fr));   */
+  display: flex;
     gap: 20px;
     flex-shrink: 1;
     margin-top: 5%;
