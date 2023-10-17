@@ -1,13 +1,10 @@
 
 import './App.css';
-import TaxCal from './components/TaxCal/TaxCal';
 import {items} from "./text";
 import FAQ from './components/FAQs/FAQ';
 import TaxCalcol from './components/TaxCalcol/TaxCalcol';
 
-
 function App() {
-
 
   return (
     <div className="main">
@@ -37,10 +34,6 @@ function App() {
 </div>
       </div>
      
-
-
-    
-
 
     </div>
   );

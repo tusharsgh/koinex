@@ -20,8 +20,8 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     
     backgroundColor: "#EFF2F5",
     border: '1px solid #ced4da',
-    fontSize: 18,
-    padding: '6px 65px 6px 5px',
+    fontSize: 14,
+    padding: '10px',
     border:0,
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
