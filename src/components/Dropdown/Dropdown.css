@@ -1,11 +1,19 @@
 .dropdown-wrapper{
     display: flex;
-  flex-direction: row;
+
   align-items: center;
   gap: 0.5rem;
   overflow: hidden;
+  flex-grow: 1;
   justify-content: start;
 }
 .dropdown-header{
   font-size: 0.875rem;
+}
+.dropdown-basis{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 0.5rem;
+  
 }

@@ -57,7 +57,7 @@ function getStyles(name, personName, theme) {
   };
 }
 
-export default function MultipleSelectPlaceholder({names,header}) {
+export default function MultipleSelectPlaceholder({names,header,setTrue}) {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
   const [age, setAge] = React.useState("")
@@ -69,7 +69,7 @@ export default function MultipleSelectPlaceholder({names,header}) {
 // width:"14.375rem"
   return (
 
-    <div className="dropdown-wrapper">
+    <div className={`${header=="Financial Year"?"dropdown-basis":"dropdown-wrapper"}`}>
       <div className="dropdown-header"> {header}</div>
       <FormControl sx={{ 
        height:"2",

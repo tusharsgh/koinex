@@ -10,10 +10,9 @@ import { Tab } from '@mui/base';
 
 function TaxCalcol() {
   const [age, setAge] = React.useState('');
-
   const[Income,setIncome] = React.useState();
-
-  const [Tax,setTax] = useState({text:"$5,092 + 32,5% of excess over $45,000",
+  const [Tax,setTax] = useState({
+                                  text:"$5,092 + 32,5% of excess over $45,000",
                                   Id:3,
                                   })
   const [checkId,setCheckId] = useState();
@@ -103,29 +102,40 @@ useChange({
     setIsShort(true);
   }
   
-
   function longTermHandler(){
     console.log("Called long");
     setIsShort(false);
   }
   
-
-
   return (
     <div className="col-wrapper">
 
        <div className="col-header">Free Crypto Tax Calculator Australia</div>
-       <div className={` ${isShort?"line":"line2"}`}></div>       
+            
     <div className="col-mainContainer">
 
+<div className="col-subPart1">
+
+<Dropdown
+       names={Financialyear}
+       header={"Financial Year"}
+       
+        />
+        <Dropdown
+        names={Country}
+        header={"Country"}
+        /> 
+</div>
+<div className="line"></div>  
+<div className="col-subPart2">
 
 
         <div className="col-subContainer1">
         
-         <Dropdown
+         {/* <Dropdown
        names={Financialyear}
        header={"Financial Year"}
-        />
+        /> */}
         <Input 
         name="Enter the purchase price of crypto"
        inputhandler={PurchaseHandler}
@@ -162,10 +172,10 @@ useChange({
       
         </div>
         <div className="col-subContainer2">
-        <Dropdown
+        {/* <Dropdown
         names={Country}
         header={"Country"}
-        /> 
+        />  */}
         <Input name="Enter sale price of Crypto"
          inputhandler={SaleHandler}
          placeholder={20000}
@@ -213,7 +223,7 @@ useChange({
           </div>
         </div>
         </div>
-        
+        </div>
         </div>
    </div>     
     
