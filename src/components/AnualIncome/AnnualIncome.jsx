@@ -21,7 +21,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     backgroundColor: "#EFF2F5",
     border: '1px solid #ced4da',
     fontSize: 18,
-    padding: '0.625rem 0.75rem 0.625rem 0.75rem',
+    padding: '0.75rem 0.75rem 0.625rem 0.75rem',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     border:0,
     // Use the system font instead of the default Roboto font.
@@ -76,7 +76,7 @@ export default function MultipleSelectPlaceholder({ taxhandler, setTax}) {
     <div className="income-wrapper">
       <div className="income-header"> Select Your Annual Income</div>
       <FormControl sx={{ 
-       height:"2",
+       height:"5",
       
       
     }}>
