@@ -57,10 +57,21 @@ margin-bottom: 20px; */
    font-size:1.875rem;
     
 }
-@media (max-width: 925px) {
+@media(max-width: 925px) {
     .main{
     display:flex;
     background: #ccced0;
+}
+.col-subContainer1{
+    display: flex;
+    flex-direction: column;
+    gap:2.75rem;
+     /* flex-grow: 1;  */
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+
 }
 .grid{
     /* display:grid;

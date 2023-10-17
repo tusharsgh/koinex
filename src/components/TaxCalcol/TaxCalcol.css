@@ -20,35 +20,37 @@ font-size: 2em;
 font-style: normal;
 font-weight: 900;
 line-height: 2.625rem;
-flex-grow: 1; /* 116.667% */
+/* flex-grow: 1; 116.667% */
 }
 .col-mainContainer{
 display: flex;
  flex-wrap: wrap;
 gap: 2rem;
 flex-direction: column;
-justify-content: space-evenly;
-flex-grow: 1;
+justify-content: space-between;
+/* flex-grow: 1; */
 /* width: 100%; */
 }
 .col-subContainer1{
     display: flex;
     flex-direction: column;
     gap:2.75rem;
-     flex-grow: 1; 
-    /* width: 80%; */
+     /* flex-grow: 1;  */
+    width: 46%;
     justify-content: space-around;
     flex-wrap: wrap;
+    overflow: hidden;
 
 }
 .col-subContainer2{
     display: flex;
     flex-direction: column;
     gap:2.75rem;
-     flex-grow: 1; 
-    /* width: 80%; */
+     /* flex-grow: 1;  */
+    width: 46%;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow: hidden;
 }
 .Tax-wrapper{
     margin-top: 4%;
@@ -257,6 +259,7 @@ color:#0052FE;
 .col-subPart2{
     display: flex;
     gap:2rem;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .col-subPart1{
