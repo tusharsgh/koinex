@@ -295,7 +295,7 @@ color:#0052FE;
         display: flex;
         flex-direction: column;
         /* align-items: center; */
-        padding: 2.1875rem 4.5625rem 3rem 4.5625rem;
+        padding: 1rem;
         /* justify-content: flex-end; */
         border-radius: 1rem;
     background: #FFF;
