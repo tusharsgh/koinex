@@ -57,6 +57,7 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 2%; 
     
 }
 .Tax-header{
@@ -269,7 +270,7 @@ color:#0052FE;
     align-items: flex-end;
     flex-wrap: wrap;
 }
-@media(max-width: 925px){
+@media(max-width: 725px){
     .col-subContainer1{
         display: flex;
         flex-direction: column;
